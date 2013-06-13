@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="normalize.css">
+	<link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+
+	<style>
+	body{
+		font-family: 'Cutive Mono', serif;
+		padding: 0px 20px;
+		//overflow: hidden;
+		box-sizing: border-box;
+	}
+
+	h1{
+		text-align: center;
+		margin-top: 200px;
+		display: block;
+		text-align: center;
+	}
+
+	a{
+		margin-top: 100px !important;
+		text-decoration: none;
+		color: #000;
+		display: block;
+		padding-left: 250px;
+		margin-bottom: 20px;
+	}
+
+	@-webkit-keyframes cursosamin {
+		0%   { opacity: 0; }
+		50%  { opacity: 1; }
+		100% { opacity: 0; }
+	}
+	@-moz-keyframes cursosamin {
+		0%   { opacity: 0; }
+		50%  { opacity: 1; }
+		100% { opacity: 0; }
+	}
+	@-o-keyframes cursosamin {
+		0%   { opacity: 0; }
+		50%  { opacity: 1; }
+		100% { opacity: 0; }
+	}
+	@keyframes cursosamin {
+		0%   { opacity: 0; }
+		50%  { opacity: 1; }
+		100% { opacity: 0; }
+	}
+
+	#cursor{
+		-webkit-animation: cursosamin .9s infinite; /* Safari 4+ */
+		-moz-animation:    cursosamin .9s infinite; /* Fx 5+ */
+		-o-animation:      cursosamin .9s infinite; /* Opera 12+ */
+		animation:         cursosamin .9s infinite; /* IE 10+ */
+	}
+	</style>
+
+	<title>Yist</title>
+</head>
+<body>
+	<h4>Generador de critica postmoderna</h4>
+	<div >
+		<h1><span id="frase"></span><span id="cursor">|</span></h1>
+	</div>
+
+	<a id="quieromas" href="#">Quiero otra</a>
+	
+	<script src="jquery.js"></script>
+	<script>
+	$(document).ready(function(){
+		randomword()
+		$("#quieromas").on("click",function(){
+			randomword()
+		})
+	})
+
+	function randomword(){
+		var f1 = ["La danza de", "Me cautiva como","Me sorprende como","Me conmueve como", "Me intriga que", "Um..","Ah..", "Estoy sorprendido porque nadie haya mencionado como"]
+
+		var f2 = ["el redescubrimiento","la evocación","la pre-vanguardia","la resonancia metaforica","la interpretacion","la reinterpretacion","la contextualizacion","la descontextualizacion","la subjetividad","lo fenotipico","lo ambivalente","la irreverencia","las filias","las fobias","los colores","la intencion"
+		,"el significado","la representacion","la estetica","la fuerza","la delicadeza","la fragmentacion","la sensitividad","el humor","la perspicacia", "lo poliformico", "lo semantico" , "la misticidad"]
+
+		var f3 = ["la concatenación surrealista", "lo humano", "lo critico", "el concepto", "lo divergente", "lo semiotico", "lo sintetico", "la experiencia", "el artista", "la obra", "la reciprocidad", "la represion"]
+
+		var f4 = ["plasma","une","distancia","contrapone","reinventa","proyecta","plasma","vislumbra","fructua","converge","refleja", "diside", "fusiona", "retribuye", "refleja","reprime"]
+
+		var f5 = ["en un sentimiento iridiscente de lo sublime en las artes", "en una participación del decalogo critico de los 90's", "en la elocuencia de las piezas oniricas", "en el substrato del pensamiento critico", "en la divagación del alma en una generación sin intensidad", "en la vanalidad del espiritu colectivo de la sociedad contemporanea","en la simbolizacion latente del significado presente en el imaginario", "en la reivindicacion de la actitud critica conceptualizada en la simpleza del sentimiento", "en la apropiación del vinculo parental reproducido por la semiotica inserta en la estetica","en una clara critica a los procesos de producción modernos","entre la Realidad en devenir y el pensamiento en el que esta cobra conciencia de sí mismas.","es justamente en la Historia en donde éste se expande y se autorreconoce más plenamente; en donde cobra plena autoconsciencia de sí.","la lógica intrínseca de la realidad","es la expresión pensada de la esencia ontológica de lo real.","estudia el llamado goce estético y la finalidad en el campo de la naturaleza.","vinculada a la idea de libertad","a pesar de su carácter oscuro y hermético","cuyos efectos llegan hasta la actualidad."]
+
+		var num = Math.floor(Math.random()*10 % f1.length)
+		var num2 = Math.floor(Math.random()*10 % f2.length)
+		var num3 = Math.floor(Math.random()*10 % f3.length)
+		var num4 = Math.floor(Math.random()*10 % f4.length)
+		var num5 = Math.floor(Math.random()*10 % f5.length)
+		//console.log(f1.length + "," + f2.length + "," + f3.length)
+
+		$("#frase").html('"' +  f1[num] + " " + f2[num2] + " de " + f3[num3] + " se " + f4[num4] + " " + f5[num5] + '"')
+	}
+	</script>
+</body>
+</html>
