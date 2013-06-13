@@ -1,0 +1,50 @@
+body{
+	font-family: 'Cutive Mono', serif;
+	padding: 0px 20px;
+	//overflow: hidden;
+	box-sizing: border-box;
+}
+
+h1{
+	text-align: center;
+	margin-top: 200px;
+	display: block;
+	text-align: center;
+}
+
+a{
+	margin-top: 100px !important;
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding-left: 250px;
+	margin-bottom: 20px;
+}
+
+@-webkit-keyframes cursosamin {
+	0%   { opacity: 0; }
+	50%  { opacity: 1; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes cursosamin {
+	0%   { opacity: 0; }
+	50%  { opacity: 1; }
+	100% { opacity: 0; }
+}
+@-o-keyframes cursosamin {
+	0%   { opacity: 0; }
+	50%  { opacity: 1; }
+	100% { opacity: 0; }
+}
+@keyframes cursosamin {
+	0%   { opacity: 0; }
+	50%  { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+#cursor{
+	-webkit-animation: cursosamin .9s infinite; /* Safari 4+ */
+	-moz-animation:    cursosamin .9s infinite; /* Fx 5+ */
+	-o-animation:      cursosamin .9s infinite; /* Opera 12+ */
+	animation:         cursosamin .9s infinite; /* IE 10+ */
+}
