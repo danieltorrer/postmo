@@ -6,7 +6,8 @@ $(document).ready(function(){
 })
 
 function randomword(){
-	var f1 = ["Me atrevo a afirmar que","La danza de", "Me cautiva como","Me sorprende como","Me conmueve como", "Me intriga que", "Um..","Ah..", "Estoy sorprendido porque nadie haya mencionado como","Las formas de","Es inconcebible como","Es inocuo como","No caigamos en el error de creer que","Llegado a este punto debemos considerar que"]
+	var f1 = ["Me atrevo a afirmar que","La danza de", "Me cautiva como","Me sorprende como","Me conmueve como", "Me intriga que", "Um..","Ah..", 
+	"Estoy sorprendido porque nadie haya mencionado como","La forma de","Es inconcebible como","Es inocuo como","No caigamos en el error de creer que","Llegado a este punto debemos considerar que"]
 
 	var f2 = ["vicisitudes","la verborragia","el redescubrimiento","la evocación","la pre-vanguardia","la resonancia metafórica","la interpretación","la reinterpretación","la contextualización","la descontextualización","la subjetividad","lo fenotípico","lo ambivalente","la irreverencia","las filias","las fobias","los colores","la intención"
 	,"el significado","la representación","la estética","la fuerza","la delicadeza","la fragmentación","la sensitividad","el humor","la perspicacia", "lo polifórmico", "lo semántico" , "la misticidad"]
@@ -37,9 +38,11 @@ function randomword(){
 	"en una cohersión dando sustento a un entrelazamiento simbólico",
 	"en un bucle sistemático de los procesos pro-capitalistas",
 	"en una clara proposición ideática neo-fascista",
-	"en la clara precisión libertina del mundo contemporaneo"]
+	"en la clara precisión libertina del mundo contemporaneo",
+	"en la gradación de formas variadas",
+	"en su aspecto externo"]
 
-	var num = Math.floor(Math.random()*10 % f1.length)
+	var num = Math.floor(Math.random() *10 % f1.length)
 	var num2 = Math.floor(Math.random()*10 % f2.length)
 	var num3 = Math.floor(Math.random()*10 % f3.length)
 	var num4 = Math.floor(Math.random()*10 % f4.length)
@@ -48,3 +51,7 @@ function randomword(){
 
 		$("#frase").html('"' +  f1[num] + " " + f2[num2] + " de " + f3[num3] + " se " + f4[num4] + " " + f5[num5] + '"')
 	}
+
+function cortarpalabra(cadena){
+	return cadena.substring(0,65)
+}

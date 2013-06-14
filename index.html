@@ -4,47 +4,51 @@
 	<meta charset="UTF-8">
 	<meta property="og:title" content="Postmo"/>
 	<meta property="og:image" content="img/imagenhipster.png"/>
-	<meta property="og:site_name" content="dominio.com"/>
-	<meta property="og:description" content="<script dirigiendo al doom>"/>
+	<meta property="og:site_name" content="undergeeks.com/postmo"/>
+	<meta property="og:description" content="Generador de crítica postmoderna"/>
+	<link rel="shortcut icon" href="favicon.ico"/>
 	<link rel="stylesheet" href="normalize.css">
 	<link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style.css">
 
-	<title>Yist</title>
+	<title>Generador de crítica postmoderna</title>
 </head>
 <body>
-	<h4>Generador de critica postmoderna</h4>
+	<h4>Generador de crítica postmoderna</h4>
 	<div >
 		<h1><span id="frase"></span><span id="cursor">|</span></h1>
 	</div>
 
 	<a id="quieromas" href="#">Quiero otra</a>
-	
 
-	<!--facebook like box-->
-	<div class="fb-like" data-href="http://localhost/" data-send="false" data-width="500" data-show-faces="true" data-font="segoe ui"></div>
-	<div id="fb-root"></div>
+	<div class="social">
+		<a id="facebook" href="https://www.facebook.com/sharer/sharer.php?u=undergeeks.com/postmo" target="_blank">
+			Compartir sabiduria en Facebook
+		</a>
 
-	<a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">
-		Compartir en Facebook
-	</a>
-	<script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/es_MX/all.js#xfbml=1&appId=148294805336647";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-	</script>
-	<!--end facebook like box-->
-	<!--twiiter share-->
-	<a href="https://twitter.com/share" class="twitter-share-button" data-text="Obtuve una profunda crítica de arte!" data-lang="es" data-count="none" data-hashtags="frasespostpodernas">Twittear</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-	<!--twitter share end-->
+		<a id="twitter" href="https://twitter.com/share" class="twitter-share-button" data-text="¡Obtuve una profunda crítica de arte!" data-lang="es" data-count="none" data-hashtags="postmo">Twittear</a>
+	</div>
+
 
 	<script src="jquery.js"></script>
 	<script src="main.js"></script>
-	
-	
+	<script>!function(d,s,id){
+		var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+		if(!d.getElementById(id)){
+			js=d.createElement(s);
+			js.id=id;
+			js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);
+		}
+	}(document, 'script', 'twitter-wjs');
+	</script>
+	<script>
+	$(document).ready(function(){
+		$('a[data-text]').each(function(){
+			$(this).attr('data-text', "Obtuve una profunda critica de arte: " + cortarpalabra( $("#frase").html() ) + '..." en http://bit.ly/18DZs9U');
+		});
+		$.getScript('http://platform.twitter.com/widgets.js');
+	});
+	</script>
+
 </body>
 </html>
