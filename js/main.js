@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	randomword()
-	$("#quieromas").on("click",function(){
+	$("#twitter").attr(
+		"href","https://twitter.com/share?url=https%3A%2F%2Fbit.ly%2F18DZs9U&text=¡Obtuve%20una%20profunda%20crítica%20de%20arte!%20" + cortarpalabra($("#frase").html()) + '.."%20&hashtags=postmo')
+	$("#quieromas").on("click",function(event){
+		event.preventDefault();
 		randomword()
 	})
 })
@@ -9,7 +12,7 @@ function randomword(){
 	var f1 = ["Me atrevo a afirmar que","La danza de", "Me cautiva como","Me sorprende como","Me conmueve como", "Me intriga que", "Um..","Ah..", 
 	"Estoy sorprendido porque nadie haya mencionado como","La forma de","Es inconcebible como","Es inocuo como","No caigamos en el error de creer que","Llegado a este punto debemos considerar que"]
 
-	var f2 = ["vicisitudes","la verborragia","el redescubrimiento","la evocación","la pre-vanguardia","la resonancia metafórica","la interpretación","la reinterpretación","la contextualización","la descontextualización","la subjetividad","lo fenotípico","lo ambivalente","la irreverencia","las filias","las fobias","los colores","la intención"
+	var f2 = ["la verborragia","el redescubrimiento","la evocación","la pre-vanguardia","la resonancia metafórica","la interpretación","la reinterpretación","la contextualización","la descontextualización","la subjetividad","lo fenotípico","lo ambivalente","la irreverencia","las filias","las fobias","los colores","la intención"
 	,"el significado","la representación","la estética","la fuerza","la delicadeza","la fragmentación","la sensitividad","el humor","la perspicacia", "lo polifórmico", "lo semántico" , "la misticidad"]
 
 	var f3 = ["la cosmogonía","la concatenación surrealista", "lo humano", "lo crítico", "el concepto", 
@@ -53,5 +56,6 @@ function randomword(){
 	}
 
 function cortarpalabra(cadena){
+	cadena.replace(/\s/g,"%20");
 	return cadena.substring(0,65)
 }

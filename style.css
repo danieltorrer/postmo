@@ -1,32 +1,126 @@
 body{
 	font-family: 'Cutive Mono', serif;
-	padding: 0px 20px;
-	//overflow: hidden;
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 h1{
+	display: none;
+}
+
+.titulo-container{
 	text-align: center;
-	margin-top: 200px;
-	display: block;
+	margin: 10px 0;
+}
+
+.titulo-container h1.titulo{
+	width: 360px;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	display: inline-block;
+}
+
+.titulo-container img{
+	display: inline-block;
+}
+
+.titulo-container img:first-child{
+	margin-right: -73px;
+}
+
+.titulo-container img:last-child{
+	margin-left: -73px;	
+}
+
+h2{
+	text-align: center;
+	padding: 10px;
+	background: none repeat scroll 0% 0% white;
+	border-bottom: 5px solid rgba(90, 70, 0, 0.2);
+	max-width: 850px;
+	margin: 20px auto;
+}
+
+.frase-container{
+	min-height: 90px;
+}
+
+.logo-container{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding-top: 20px;
 }
 
 #quieromas{
 	display: block;
-	padding: 20px;
-	text-align: center
+	text-align: center;
+	background: url("img/otra.png") no-repeat;
+	width: 268px;
+	height: 59px;
+	margin: 0 auto;
+	padding-bottom: 25px;
 }
 
 .social{
-	margin-bottom: 20px;
-	padding: 20px;
+	margin: 0 auto;
 	text-align: center;
+	position: relative;
+	width: 226px;
+	padding-bottom: 30px;
+}
+
+.social img{
+	margin-top: 5px;
 }
 
 .social a{
 	text-decoration: none;
 	color: #000;
 	display: block;
+}
+
+#facebook{
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	top: 18px;
+	left: 24px;
+}
+
+#twitter{
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	top: 18px;
+	left: 140px;	
+}
+
+#main{
+	//min-height: 560px;
+	//width: 100%;
+	padding: 0px 20px;
+	background: #F7F7F2;
+	box-sizing: border-box;
+}
+
+#desc{
+	min-height: 300px;
+	background: #fcf7cd;
+}
+
+#desc>div:first-child{
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 40px 20px;
+}
+
+#desc>div>h3,#desc>div>p,#desc>div>ol{
+	text-align: left;
+	margin: 0px;
+	margin-bottom: 20px;
+
 }
 
 @-webkit-keyframes cursosamin {
@@ -55,4 +149,11 @@ h1{
 	-moz-animation:    cursosamin .9s infinite; /* Fx 5+ */
 	-o-animation:      cursosamin .9s infinite; /* Opera 12+ */
 	animation:         cursosamin .9s infinite; /* IE 10+ */
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
