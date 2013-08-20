@@ -1,7 +1,18 @@
-body{
-	font-family: 'Cutive Mono', serif;
-	box-sizing: border-box;
-	overflow-x: hidden;
+html,body{
+	height: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	user-select: none;
+	background: #F7F7F2;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	font-family: 'Cutive Mono', serif !important;
 }
 
 h1{
@@ -10,7 +21,7 @@ h1{
 
 .titulo-container{
 	text-align: center;
-	margin: 10px 0;
+	margin: 5px 0;
 }
 
 .titulo-container h1.titulo{
@@ -33,24 +44,34 @@ h1{
 	margin-left: -73px;	
 }
 
-h2{
+.frase-container h5{
 	text-align: center;
-	padding: 10px;
-	background: none repeat scroll 0% 0% white;
-	border-bottom: 5px solid rgba(90, 70, 0, 0.2);
-	max-width: 850px;
-	margin: 20px auto;
 }
 
 .frase-container{
-	min-height: 90px;
+	margin: 15px auto;
+	width: 85%;
+	position: relative;
+	background: none repeat scroll 0% 0% white;
+	border-bottom: 5px solid rgba(90, 70, 0, 0.2);
+	
+
+	padding: 7px;
+
+	-webkit-touch-callout: text;
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: -moz-text;
+	-ms-user-select: text;
+	user-select: text;
+}
+
+.logo,.titulo-container{
+	cursor: pointer;
 }
 
 .logo-container{
-	width: 100%;
-	height: auto;
 	text-align: center;
-	padding-top: 20px;
 }
 
 #quieromas{
@@ -68,7 +89,8 @@ h2{
 	text-align: center;
 	position: relative;
 	width: 226px;
-	padding-bottom: 30px;
+	background: #F7F7F2;
+	//padding-top: 10px;
 }
 
 .social img{
@@ -81,11 +103,15 @@ h2{
 	display: block;
 }
 
+.social p{
+	margin-bottom: 0px;
+}
+
 #facebook{
 	height: 60px;
 	width: 60px;
 	position: absolute;
-	top: 18px;
+	top: 60px;
 	left: 24px;
 }
 
@@ -93,34 +119,33 @@ h2{
 	height: 60px;
 	width: 60px;
 	position: absolute;
-	top: 18px;
+	top: 60px;
 	left: 140px;	
 }
 
-#main{
-	//min-height: 560px;
-	//width: 100%;
-	padding: 0px 20px;
+#main{	
+	height: 100%;
 	background: #F7F7F2;
 	box-sizing: border-box;
+	margin-top: 30px;
+	//display: table;
+}
+
+#main>div:first-child{
+	//display: table-cell;
+	//vertical-align: middle;
 }
 
 #desc{
-	min-height: 300px;
+	height: 100%;
 	background: #fcf7cd;
-}
 
-#desc>div:first-child{
-	max-width: 500px;
-	margin: 0 auto;
-	padding: 40px 20px;
 }
 
 #desc>div>h3,#desc>div>p,#desc>div>ol{
 	text-align: left;
 	margin: 0px;
 	margin-bottom: 20px;
-
 }
 
 @-webkit-keyframes cursosamin {
@@ -156,4 +181,12 @@ h2{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+.random{
+	text-align: right;
+}
+
+.random img{
+	cursor: pointer;
 }

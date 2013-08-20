@@ -2,7 +2,7 @@ $(document).ready(function(){
 	randomword()
 	$("#twitter").attr(
 		"href","https://twitter.com/share?url=https%3A%2F%2Fbit.ly%2F18DZs9U&text=¡Obtuve%20una%20profunda%20crítica%20de%20arte!%20" + cortarpalabra($("#frase").html()) + '.."%20&hashtags=postmo')
-	$("#quieromas").on("click",function(event){
+	$("#quieromas, .logo, .titulo-container, .random").on("click",function(event){
 		event.preventDefault();
 		randomword()
 	})
