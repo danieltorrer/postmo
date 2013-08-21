@@ -85,7 +85,7 @@ h1{
 }
 
 .social{
-	margin: 0 auto;
+	margin: 0 auto 15px auto;
 	text-align: center;
 	position: relative;
 	width: 226px;
@@ -111,7 +111,7 @@ h1{
 	height: 60px;
 	width: 60px;
 	position: absolute;
-	top: 60px;
+	top: 40px;
 	left: 24px;
 }
 
@@ -119,34 +119,41 @@ h1{
 	height: 60px;
 	width: 60px;
 	position: absolute;
-	top: 60px;
+	top: 40px;
 	left: 140px;	
 }
 
 #main{	
-	height: 100%;
+	min-height: 100%;
 	background: #F7F7F2;
 	box-sizing: border-box;
 	margin-top: 30px;
-	//display: table;
+	display: table;
 }
 
-#main>div:first-child{
-	//display: table-cell;
-	//vertical-align: middle;
+#desc>.row{
+	display: table-cell;
+	vertical-align: middle;
 }
 
 #desc{
-	height: 100%;
+	display: table;
+	min-height: 100%;
 	background: #fcf7cd;
-
 }
 
-#desc>div>h3,#desc>div>p,#desc>div>ol{
-	text-align: left;
-	margin: 0px;
-	margin-bottom: 20px;
+.random{
+	text-align: right;
 }
+
+.random img{
+	cursor: pointer;
+}
+
+#desc>.row>div>div>ol{
+	padding-left: 25px;
+}
+
 
 @-webkit-keyframes cursosamin {
 	0%   { opacity: 0; }
@@ -181,12 +188,4 @@ h1{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-}
-
-.random{
-	text-align: right;
-}
-
-.random img{
-	cursor: pointer;
 }
