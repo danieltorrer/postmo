@@ -45,6 +45,23 @@ function randomword(){
 	"en la gradación de formas variadas",
 	"en su aspecto externo"]
 
+
+	var f1 = ["Me atrevo a afirmar que",
+	"La danza de",
+	"Me cautiva como",
+	"Me sorprende como",
+	"Me conmueve como",
+	"Me intriga que",
+	"Um..",
+	"Ah..",
+	"Estoy sorprendido porque nadie haya mencionado como",
+	"La forma de",
+	"Es inconcebible como",
+	"Es inocuo como",
+	"No caigamos en el error de creer que",
+	"Llegado a este punto debemos considerar que"];
+
+
 	var num = Math.floor(Math.random() *10 % f1.length)
 	var num2 = Math.floor(Math.random()*10 % f2.length)
 	var num3 = Math.floor(Math.random()*10 % f3.length)
@@ -55,7 +72,7 @@ function randomword(){
 		$("#frase").html('"' +  f1[num] + " " + f2[num2] + " de " + f3[num3] + " se " + f4[num4] + " " + f5[num5] + '"')
 	}
 
-function cortarpalabra(cadena){
-	cadena.replace(/\s/g,"%20");
-	return cadena.substring(0,65)
-}
+	function cortarpalabra(cadena){
+		cadena.replace(/\s/g,"%20");
+		return cadena.substring(0,65)
+	}

@@ -123,12 +123,17 @@ h1{
 	left: 140px;	
 }
 
-#main{	
+#main{
 	min-height: 100%;
 	background: #F7F7F2;
 	box-sizing: border-box;
-	margin-top: 30px;
+	//margin-top: 30px;
 	display: table;
+}
+
+#main>div{
+	display: table-cell;
+	vertical-align: middle;
 }
 
 #desc>.row{
@@ -140,6 +145,12 @@ h1{
 	display: table;
 	min-height: 100%;
 	background: #fcf7cd;
+	box-sizing: border-box;
+	border-left: 1px solid #ddd;
+}
+
+#desc>div.row>p>a{
+	color: #aaa !important;
 }
 
 .random{
