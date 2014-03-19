@@ -54,7 +54,7 @@ h1{
 	position: relative;
 	background: none repeat scroll 0% 0% white;
 	border-bottom: 5px solid rgba(90, 70, 0, 0.2);
-	
+	max-width: 750px;
 
 	padding: 7px;
 
